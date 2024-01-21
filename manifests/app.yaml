@@ -18,7 +18,11 @@ spec:
     spec:
       containers:
         - name: app
-          image: mattiafj/go-hello-world:latest
+          image: mattiafj/go-hello-world:linux
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
           ports:
             - containerPort: 8080
 ---
