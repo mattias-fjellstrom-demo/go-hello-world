@@ -31,7 +31,7 @@ kind: Service
 metadata:
   name: hello-world-svc
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   selector:
     app: hello-world
   ports:
