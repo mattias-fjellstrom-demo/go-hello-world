@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: hello-hashitalks-ingress
+spec:
+  ingressClassName: webapprouting.kubernetes.azure.com
+  rules:
+  - host: app01.mattiasfjellstrom.com
+    http:
+      paths:
+      - backend:
+          service:
+            name: hello-hashitalks-svc
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
