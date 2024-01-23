@@ -5,7 +5,7 @@ metadata:
 spec:
   ingressClassName: webapprouting.kubernetes.azure.com
   rules:
-  - host: app01.mattiasfjellstrom.com
+  - host: app02.mattiasfjellstrom.com
     http:
       paths:
       - backend:
