@@ -4,7 +4,7 @@ kind: Service
 metadata:
   name: hello-hashitalks-svc
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: hello-hashitalks
   ports:
