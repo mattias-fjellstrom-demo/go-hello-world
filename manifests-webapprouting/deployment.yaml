@@ -1,0 +1,27 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-hashitalks-deployment
+  labels:
+    name: hello-hashitalks
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hello-hashitalks
+  template:
+    metadata:
+      name: hello-hashitalks
+      labels:
+        app: hello-hashitalks
+    spec:
+      containers:
+        - name: app
+          image: mattiafj/go-hello-hashitalks:v1
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "200m"
+          ports:
+            - containerPort: 8080
